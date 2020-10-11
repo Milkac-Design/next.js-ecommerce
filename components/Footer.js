@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <header className="footerStyle">
-      <img className="logoStyle" src="/logo.png" alt="logo" />
+      <img className="logoStyle" src="/logo_wite.png" alt="logo" />
       <nav>
         <Link href="/">
           <a>Home</a>
@@ -11,7 +11,7 @@ export default function Footer() {
         <Link href="/products">
           <a>Products</a>
         </Link>
-        <Link href="/">
+        <Link href="/checkout">
           <a>Checkout</a>
         </Link>
       </nav>
