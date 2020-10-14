@@ -1,10 +1,9 @@
-import { calculateTotalItemsInCart } from '../utils/cookies';
 import { removeItemFromCartInCookie } from '../utils/cookies';
 import { updateAmountInCartInCookie } from '../utils/cookies';
 import { getCartFromCookies } from '../utils/cookies';
-import { products } from '../utils/database';
+// import { products } from '../utils/database';
 
-export default function CartFunction({ cart, setCart }) {
+export default function CartFunction({ products, cart, setCart }) {
   function calculateTotal(cartForTotal) {
     const total = cartForTotal.reduce((acc, curr) => {
       return (
@@ -86,7 +85,6 @@ export default function CartFunction({ cart, setCart }) {
         <hr />
         <div>
           <div className="cartTotalStyle">Total: {calculateTotal(cart)} €</div>
-          <div>Items: {calculateTotalItemsInCart(cart)}</div>
         </div>
       </div>
     );
@@ -98,3 +96,10 @@ export default function CartFunction({ cart, setCart }) {
     );
   }
 }
+// export async function getServerSideProps() {
+//   const { getProducts } = await import('../utils/serverDatabase');
+//   const products = await getProducts();
+//   return {
+//     props: { products: products },
+//   };
+// }

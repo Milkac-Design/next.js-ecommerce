@@ -1,24 +1,23 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import { products } from '../utils/database';
+// import { products } from '../utils/database';
 import nextCookies from 'next-cookies';
 import AddToCart from '../components/AddToCart';
 
 export default function Display(props) {
-  const product = products.find((currentProduct) => {
-    if (currentProduct.id === props.id) {
+  const product = props.products.find((currentProduct) => {
+    if (currentProduct.id.toString() === props.id) {
       return true;
     }
-
     return false;
   });
 
-  const [cart, setCart] = useState(props.addedToy);
+  const setCart = useState(props.addedToy);
 
   return (
     <>
-      <Layout>
+      <Layout cart={props.addedToy}>
         <Head>
           <title>Product</title>
         </Head>
@@ -50,12 +49,18 @@ export default function Display(props) {
   );
 }
 
-export function getServerSideProps(context) {
+export async function getServerSideProps(context) {
+  const { getProducts } = await import('../utils/serverDatabase');
+  const products = await getProducts();
   const allCookies = nextCookies(context);
   const addedToy = allCookies.cart || [];
 
-  console.log(addedToy);
+  console.log(products);
   return {
-    props: { id: context.query.display, addedToy: addedToy },
+    props: {
+      id: context.query.display,
+      addedToy: addedToy,
+      products: products,
+    },
   };
 }

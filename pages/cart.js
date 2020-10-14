@@ -7,6 +7,8 @@ import Link from 'next/link';
 
 export default function Cart(props) {
   const [cart, setCart] = useState(props.cartFromCookies);
+  const products = props.products;
+  console.log(products);
   return (
     <>
       <Layout cart={cart}>
@@ -18,7 +20,7 @@ export default function Cart(props) {
             <div>
               <h1>Your Cart</h1>
             </div>
-            <CartFunction cart={cart} setCart={setCart} />
+            <CartFunction products={products} cart={cart} setCart={setCart} />
             <Link href={'/checkout'}>
               <a>GO TO CHECKOUT</a>
             </Link>
@@ -29,13 +31,16 @@ export default function Cart(props) {
     </>
   );
 }
-export function getServerSideProps(context) {
+export async function getServerSideProps(context) {
+  const { getProducts } = await import('../utils/serverDatabase');
+  const products = await getProducts();
   const allCookies = nextCookies(context);
   const cartFromCookies = allCookies.cart || [];
   console.log(cartFromCookies);
   return {
     props: {
       cartFromCookies: cartFromCookies,
+      products: products,
     },
   };
 }

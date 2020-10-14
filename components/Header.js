@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { calculateTotalItemsInCart } from '../utils/cookies';
-import { getCartFromCookies } from '../utils/cookies';
+import {
+  calculateTotalItemsInCart,
+  getCartFromCookies,
+} from '../utils/cookies';
 
-export default function Header(cart, setCart) {
-  // const setter = getCartFromCookies;
-  // setCart(setter);
-
+export default function Header() {
+  const cart = getCartFromCookies();
   return (
     <header className="headerStyle">
       <img className="logoStyle" src="/logo_wite.png" alt="logo" />
@@ -25,8 +25,7 @@ export default function Header(cart, setCart) {
             />
           </a>
         </Link>
-
-        {/* <span>{calculateTotalItemsInCart(cart)}</span> */}
+        <span>{calculateTotalItemsInCart(cart)}</span>
         <Link href="/checkout">
           <a>Checkout</a>
         </Link>

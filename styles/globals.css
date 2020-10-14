@@ -29,7 +29,10 @@ body {
   font-size: 19px;
   font-weight: 500;
 }
-
+.headerStyle span {
+  font-size: 19px;
+  color: whitesmoke;
+}
 .footerStyle {
   background-color: rgb(40, 110, 200);
   height: 10vh;
