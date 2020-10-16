@@ -149,6 +149,11 @@ body {
   font-weight: 500;
   margin: 10px;
 }
+.displayTextBoxStyle a{
+color: rgb(40, 110, 200);
+  font-size: 24px;
+  font-weight: 500;
+}
 
 .addToCartButton {
   color: rgb(40, 110, 200);

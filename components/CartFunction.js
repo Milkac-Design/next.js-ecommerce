@@ -96,10 +96,3 @@ export default function CartFunction({ products, cart, setCart }) {
     );
   }
 }
-// export async function getServerSideProps() {
-//   const { getProducts } = await import('../utils/serverDatabase');
-//   const products = await getProducts();
-//   return {
-//     props: { products: products },
-//   };
-// }

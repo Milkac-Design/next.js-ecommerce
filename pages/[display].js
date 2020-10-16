@@ -42,6 +42,9 @@ export default function Display(props) {
               <p>Price {product.price}€</p>
             </div>
             <AddToCart id={product.id} setCart={setCart} />
+            <div>
+              <a href="./products">Back to Products</a>
+            </div>
           </div>
         </div>
       </Layout>
@@ -55,7 +58,6 @@ export async function getServerSideProps(context) {
   const allCookies = nextCookies(context);
   const addedToy = allCookies.cart || [];
 
-  console.log(products);
   return {
     props: {
       id: context.query.display,

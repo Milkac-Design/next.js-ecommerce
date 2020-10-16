@@ -8,7 +8,7 @@ import Link from 'next/link';
 export default function Cart(props) {
   const [cart, setCart] = useState(props.cartFromCookies);
   const products = props.products;
-  console.log(products);
+
   return (
     <>
       <Layout cart={cart}>
@@ -36,7 +36,7 @@ export async function getServerSideProps(context) {
   const products = await getProducts();
   const allCookies = nextCookies(context);
   const cartFromCookies = allCookies.cart || [];
-  console.log(cartFromCookies);
+
   return {
     props: {
       cartFromCookies: cartFromCookies,
