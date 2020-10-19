@@ -1,7 +1,7 @@
 import { removeItemFromCartInCookie } from '../utils/cookies';
 import { updateAmountInCartInCookie } from '../utils/cookies';
 import { getCartFromCookies } from '../utils/cookies';
-// import { products } from '../utils/database';
+
 
 export default function CartFunction({ products, cart, setCart }) {
   function calculateTotal(cartForTotal) {
@@ -9,7 +9,7 @@ export default function CartFunction({ products, cart, setCart }) {
       return (
         acc +
         curr.amount *
-          products.filter((product) => product.id === curr.id)[0].price
+        products.filter((product) => product.id === curr.id)[0].price
       );
     }, 0);
     return total;

@@ -23,9 +23,9 @@ export default function Header() {
               src="/shopping_cart.png"
               alt="shopping cart"
             />
+            <span>{calculateTotalItemsInCart(cart)}</span>
           </a>
         </Link>
-        <span>{calculateTotalItemsInCart(cart)}</span>
         <Link href="/checkout">
           <a>Checkout</a>
         </Link>
