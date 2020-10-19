@@ -1,7 +1,9 @@
+import setPostgresDefaultsOnHeroku from './setPostgressOnHeroku'
 import postgres from 'postgres';
 import dotenv from 'dotenv';
 import camelcaseKeys from 'camelcase-keys';
 
+setPostgresDefaultsOnHeroku();
 dotenv.config();
 const sql = postgres();
 
