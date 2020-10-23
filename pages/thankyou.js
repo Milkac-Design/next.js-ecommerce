@@ -11,7 +11,7 @@ export default function ThankYou() {
         </Head>
         <main className='thankyouPageStyle'>
           <div className='thankyouTextStyle'>
-            <h1>Thank You For shopping with us!</h1>
+            <h1 data-cy='thank-you'>Thank You For shopping with us!</h1>
             <h2>-Stay Cool, stay Pop-Tacular-</h2>
           </div>
         </main>

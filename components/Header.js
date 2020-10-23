@@ -17,7 +17,7 @@ export default function Header() {
           <a>Products</a>
         </Link>
         <Link href="/cart">
-          <a>
+          <a data-cy='shopping-cart'>
             <img
               className="shoppingCartStyle"
               src="/shopping_cart.png"

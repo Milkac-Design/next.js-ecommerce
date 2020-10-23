@@ -36,14 +36,14 @@ export default function Display(props) {
           </div>
           <div className="displayTextBoxStyle">
             <div>
-              <p>{product.name}</p>
+              <p data-cy='product-name'>{product.name}</p>
             </div>
             <div>
               <p>Price {product.price}€</p>
             </div>
             <AddToCart id={product.id} setCart={setCart} />
             <div>
-              <a href="./products">Back to Products</a>
+              <a data-cy='back-to-products' href="./products">Back to Products</a>
             </div>
           </div>
         </div>

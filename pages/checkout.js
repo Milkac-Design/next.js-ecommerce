@@ -120,7 +120,7 @@ export default function Checkout(props) {
             {formik.touched.card && formik.errors.card ? (
               <div>{formik.errors.card}</div>
             ) : null}
-            <button type="submit" >BUY NOW</button>
+            <button data-cy='buy-now' type="submit" >BUY NOW</button>
           </form>
         </div>
       </div>

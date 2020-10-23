@@ -22,7 +22,7 @@ export default function Cart(props) {
             </div>
             <CartFunction products={products} cart={cart} setCart={setCart} />
             <Link href={'/checkout'}>
-              <a>GO TO CHECKOUT</a>
+              <a data-cy='checkout-button'>GO TO CHECKOUT</a>
             </Link>
           </div>
         </div>

@@ -29,7 +29,7 @@ export default function AddToCart(props) {
           value={quantity}
           onChange={(e) => handleChange(e)}
         />
-        <input className="addToCartButton" type="submit" value="Add to Cart" />
+        <input data-cy='add-to-cart' className="addToCartButton" type="submit" value="Add to Cart" />
       </form>
     </div>
   );

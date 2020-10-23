@@ -15,7 +15,7 @@ export default function Products() {
         <div className="productPageStyle">
           <div className="productRowsStyle">
             <Link href="/1">
-              <a>
+              <a data-cy='groot-product-link'>
                 <div className="productBox">
                   <img src="/groot1.png" alt="groot" />
                   <div>
@@ -28,7 +28,7 @@ export default function Products() {
               </a>
             </Link>
             <Link href="/2">
-              <a>
+              <a data-cy='marvel-product-link'>
                 <div className="productBox">
                   <img src="/captain_marvel1.png" alt="captain marvel" />
                   <div>
@@ -41,7 +41,7 @@ export default function Products() {
               </a>
             </Link>
             <Link href="/3">
-              <a>
+              <a data-cy='gambit-product-link'>
                 <div className="productBox">
                   <img src="/gambit1.png" alt="gambit" />
                   <div>
@@ -56,7 +56,7 @@ export default function Products() {
           </div>
           <div className="productRowsStyle">
             <Link href="/4">
-              <a>
+              <a data-cy='harley-product-link'>
                 <div className="productBox">
                   <img src="/harley1.png" alt="harley" />
                   <div>
@@ -69,7 +69,7 @@ export default function Products() {
               </a>
             </Link>
             <Link href="/5">
-              <a>
+              <a data-cy='superman-product-link'>
                 <div className="productBox">
                   <img src="/superman1.png" alt="superman" />
                   <div>
@@ -82,7 +82,7 @@ export default function Products() {
               </a>
             </Link>
             <Link href="/6">
-              <a>
+              <a data-cy='joker-product-link'>
                 <div className="productBox">
                   <img src="/joker1.png" alt="joker" />
                   <div>
@@ -97,7 +97,7 @@ export default function Products() {
           </div>
           <div className="productRowsStyle">
             <Link href="/7">
-              <a>
+              <a data-cy='spider-product-link'>
                 <div className="productBox">
                   <img src="/spiderman1.png" alt="spiderman" />
                   <div>
@@ -110,7 +110,7 @@ export default function Products() {
               </a>
             </Link>
             <Link href="/8">
-              <a>
+              <a data-cy='wonderwoman-product-link'>
                 <div className="productBox">
                   <img src="/wonderwoman1.png" alt="wonderwoman" />
                   <div>
@@ -123,7 +123,7 @@ export default function Products() {
               </a>
             </Link>
             <Link href="/9">
-              <a>
+              <a data-cy='ironman-product-link'>
                 <div className="productBox">
                   <img src="/ironman1.png" alt="ironman" />
                   <div>

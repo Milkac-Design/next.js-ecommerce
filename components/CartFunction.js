@@ -49,7 +49,7 @@ export default function CartFunction({ products, cart, setCart }) {
                         setCart(getCartFromCookies());
                       }}
                     ></input>
-                    <button
+                    <button data-cy='remove-item'
                       onClick={() => {
                         removeItemFromCartInCookie(item.id);
                         setCart(getCartFromCookies());

@@ -15,7 +15,11 @@ export default function Footer() {
           <a>Checkout</a>
         </Link>
       </nav>
-      <p>Coded by Mario</p>
+      <div className='codeBy'>
+        <p>Code by Mario</p>
+        <Link href='https://github.com/Milkac-Design'>
+          <a target="_blank"> <img className='githubStyle' src='/github-logo.png' alt='' /></a>
+        </Link></div>
     </header>
   );
 }
